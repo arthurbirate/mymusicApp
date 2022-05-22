@@ -1,6 +1,6 @@
 # Music app with Android studio using java
 
-![Music] (/Users/birate/Documents/professional skiils/mymusicApp/svg/play-svgrepo-com.svg)
+![Music](/Users/birate/Documents/professional skiils/mymusicApp/svg/myogo.png)
 
 In this i am using java to make a music app which can only fetch music from the External storage of the device  but this is not final
 the App still have issues which i will describe later as we proceed with the explanation.
