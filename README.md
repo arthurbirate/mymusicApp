@@ -17,3 +17,4 @@ the App still have issues which i will describe later as we proceed with the exp
 on gradle.properties the following dependecies should be added:
 
 * Dexter karumi this simplifies the process of requesting permissions at runtime. get it here <https://github.com/Karumi/Dexter>
+*  for the audio visualiser which i am still working.. on you found it on <https://github.com/aashrafh/AudioVisualizer>
