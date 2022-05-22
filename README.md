@@ -10,3 +10,9 @@ the App still have issues which i will describe later as we proceed with the exp
 
 * you can use intellij(when creating the project you should choose the android platform and for the language you can either use java or kotlin)
 * or android studio(android studio arm for mac users)
+
+
+#Dependecies to install
+on gradle.properties the following dependecies should be added:
+
+*Dexter karumi this simplifies the process of requesting permissions at runtime. get it here <https://github.com/Karumi/Dexter>
