@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    //    Here for the runtime permission I used Dexter library which can be found on Github-karumi
+
     public void runtimePermission()
     {
         Dexter.withContext(this).withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO)
@@ -62,17 +65,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<File> findSong (File file)
+    //Here I am implementing a method to get r songs from External storage
+
+    public ArrayList<File> getSong (File file)
     {
         ArrayList<File> arrayList = new ArrayList<>();
 
         File[] files = file.listFiles();
 
+        //        a for loop to check whether the file is a mp3 or a .wav
+
         for (File singlefile: files)
         {
             if (singlefile.isDirectory() && !singlefile.isHidden())
             {
-                arrayList.addAll(findSong(singlefile));
+                arrayList.addAll(getSong(singlefile));
             }
             else
             {
@@ -85,9 +92,11 @@ public class MainActivity extends AppCompatActivity {
         return arrayList;
     }
 
+    // Creating a method to display the songs
+
     void displaySongs()
     {
-        final ArrayList<File> mySongs = findSong(Environment.getExternalStorageDirectory());
+        final ArrayList<File> mySongs = getSong(Environment.getExternalStorageDirectory());
 
         items = new String[mySongs.size()];
         for (int i = 0; i<mySongs.size();i++)
